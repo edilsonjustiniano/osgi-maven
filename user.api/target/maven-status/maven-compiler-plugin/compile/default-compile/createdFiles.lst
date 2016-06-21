@@ -1,0 +1,3 @@
+org/user/api/Activator.class
+org/user/api/UserService.class
+org/user/model/User.class

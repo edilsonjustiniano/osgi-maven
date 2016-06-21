@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>br.com.prototypes</groupId>
+		<artifactId>osgi</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>${parent.groupId}</groupId>
+	<artifactId>user.api</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>user.api</name>
+	<packaging>bundle</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>${pom.groupId}.${pom.artifactId}</Bundle-SymbolicName>
+						<Bundle-Name>User API</Bundle-Name>
+						<Bundle-Description>User API with Services definition</Bundle-Description>
+						<Bundle-Vendor>Edilson Justiniano</Bundle-Vendor>
+						<Bundle-Version>1.0.0</Bundle-Version>
+						<Bundle-Activator>org.user.api.Activator</Bundle-Activator>
+						<Export-Package>
+							org.user.model;
+							org.user.api
+						</Export-Package>
+					</instructions>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>
