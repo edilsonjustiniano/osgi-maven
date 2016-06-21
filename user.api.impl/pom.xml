@@ -46,7 +46,6 @@
 						<Bundle-Version>1.0.0</Bundle-Version>
 						<Bundle-Activator>org.user.api.impl.Activator</Bundle-Activator>
 						<Private-Package>org.user.api.impl</Private-Package>
-						<Export-Service>user.api.impl.UserServiceImpl</Export-Service>
 					</instructions>
 				</configuration>
 			</plugin>

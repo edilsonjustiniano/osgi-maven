@@ -13,6 +13,7 @@ public class UserServiceImpl implements UserService {
 		List<User> users = new ArrayList<>();
 		System.out.println("listUsers");
 		users.add(new User("007", "James Bond"));
+		System.out.println(users.toString());
 		return users;
 	}
 
